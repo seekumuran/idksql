@@ -1,0 +1,114 @@
+body {
+
+    background:
+        radial-gradient(
+            circle at top,
+            #120000,
+            #050505 60%
+        );
+
+    overflow: hidden;
+}
+
+/* GRID */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 0, 0, 0.06) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255, 0, 0, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+/* SCANLINES */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.03),
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+
+    opacity: 0.12;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+/* GLOW TEXT */
+
+.glow-red {
+
+    color: #ff4d4d;
+
+    text-shadow:
+        0 0 5px rgba(255,0,0,0.8),
+        0 0 15px rgba(255,0,0,0.6),
+        0 0 30px rgba(255,0,0,0.3);
+}
+
+/* PANELS */
+
+.cyber-panel {
+
+    background:
+        rgba(10,10,10,0.85);
+
+    border:
+        1px solid rgba(255,0,0,0.2);
+
+    box-shadow:
+        0 0 20px rgba(255,0,0,0.08);
+
+    backdrop-filter: blur(8px);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #3f0000;
+}
